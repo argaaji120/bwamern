@@ -12,8 +12,8 @@ import formatNumber from "utils/formatNumber";
 export default function Hero(props) {
   function showMostPicked() {
     window.scrollTo({
-      top: props.refMostPicker.current.offsetTop - 30,
-      behavior: "shooth",
+      top: props.refMostPicked.current.offsetTop - 30,
+      behavior: "smooth",
     });
   }
 
@@ -26,7 +26,8 @@ export default function Hero(props) {
             Start Next Vacation
           </h1>
           <p className="mb-4 font-weight-light text-gray-500 w-75" style={{ lineHeight: "170%" }}>
-            We provide what you need to enjoy your <br /> holiday with family. Time to make another memorable moments.
+            We provide what you need to enjoy your <br /> holiday with family. Time to make another
+            memorable moments.
           </p>
           <Button className="btn px-5" hasShadow isPrimary onClick={showMostPicked}>
             Show Me Now
@@ -34,23 +35,36 @@ export default function Hero(props) {
 
           <div className="row" style={{ marginTop: 80 }}>
             <div className="col-auto" style={{ marginRight: 35 }}>
-              <img src={IconTraveler} alt={`${props.data.travelers} travelers`} width="36" height="36" />
+              <img
+                src={IconTraveler}
+                alt={`${props.data.travelers} travelers`}
+                width="36"
+                height="36"
+              />
               <h6 className="mt-3">
-                {formatNumber(props.data.travelers)} <span className="text-gray-500 font-weight-light">travelers</span>
+                {formatNumber(props.data.travelers)}{" "}
+                <span className="text-gray-500 font-weight-light">travelers</span>
               </h6>
             </div>
 
             <div className="col-auto" style={{ marginRight: 35 }}>
-              <img src={IconTreasure} alt={`${props.data.treasures} treasures`} width="36" height="36" />
+              <img
+                src={IconTreasure}
+                alt={`${props.data.treasures} treasures`}
+                width="36"
+                height="36"
+              />
               <h6 className="mt-3">
-                {formatNumber(props.data.treasures)} <span className="text-gray-500 font-weight-light">treasures</span>
+                {formatNumber(props.data.treasures)}{" "}
+                <span className="text-gray-500 font-weight-light">treasures</span>
               </h6>
             </div>
 
             <div className="col-auto">
               <img src={IconCities} alt={`${props.data.cities} cities`} width="36" height="36" />
               <h6 className="mt-3">
-                {formatNumber(props.data.cities)} <span className="text-gray-500 font-weight-light">cities</span>
+                {formatNumber(props.data.cities)}{" "}
+                <span className="text-gray-500 font-weight-light">cities</span>
               </h6>
             </div>
           </div>
@@ -58,8 +72,18 @@ export default function Hero(props) {
 
         <div className="col-6 pl-5">
           <div style={{ width: 520, height: 410 }}>
-            <img src={HeroImage} alt="Hero" className="img-fluid position-absolute" style={{ margin: "-30px 0 0 -30px", zIndex: 1 }} />
-            <img src={HeroImageFrame} alt="Hero Frame" className="img-fluid position-absolute" style={{ margin: "0 -15px -15px 0" }} />
+            <img
+              src={HeroImage}
+              alt="Hero"
+              className="img-fluid position-absolute"
+              style={{ margin: "-30px 0 0 -30px", zIndex: 1 }}
+            />
+            <img
+              src={HeroImageFrame}
+              alt="Hero Frame"
+              className="img-fluid position-absolute"
+              style={{ margin: "0 -15px -15px 0" }}
+            />
           </div>
         </div>
       </div>
