@@ -5,6 +5,7 @@ import "assets/scss/style.scss";
 
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
+import CheckoutPage from "pages/CheckoutPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Route exact path="/" component={LandingPage}></Route>
         <Route exact path="/properties/:id" component={DetailsPage}></Route>
+        <Route exact path="/checkout" component={CheckoutPage}></Route>
       </Router>
     </div>
   );
